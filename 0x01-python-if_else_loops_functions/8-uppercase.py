@@ -5,6 +5,6 @@ def uppercase(str):
             lower = True
         else:
             lower = False
-        print("{}".format((chr(ord(str[i]) - 32)) if lower else\
+        print("{}".format((chr(ord(str[i]) - 32)) if lower else \
                 str[i]), end="")
     print("")
