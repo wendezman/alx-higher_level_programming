@@ -68,14 +68,14 @@ class SinglyLinkedList:
             return
 
         if value < self.__head.data:
-            self.__head = Node(value, self.__head)
+            self.__head = Node(value, self.__head) # beginning of node
             return
 
         future, past = self.__head.next_node, self.__head
         while future is not None:
             if value < future.data:
-                past.next_node = Node(value, future)
+                past.next_node = Node(value, future) # middle of node
                 return
             past = future
             future = future.next_node
-        past.next_node = Node(value)
+        past.next_node = Node(value) # end of node
