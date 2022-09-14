@@ -1,11 +1,23 @@
 #!/usr/bin/python3
+""" Node module """
+
+
 class Node:
+    """ Declares the Node class """
+
     def __init__(self, data, next_node=None) -> None:
+        """
+        Intializes the attributes of node class
+        Args:
+            data: value of node
+            next_node:  address of next node
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """ Gets data of a linked list """
         return self.__data
 
     @data.setter
@@ -17,6 +29,7 @@ class Node:
 
     @property
     def next_node(self):
+        """ Gets next_node of a linked list """
         return self.__next_node
 
     @next_node.setter
@@ -27,10 +40,14 @@ class Node:
             self.__next_node = value
 
 class SinglyLinkedList:
+    """ Declares a class of SinglyLinkedList """
+
     def __init__(self) -> None:
+        """ Intializes the private attribute """
         self.__head = None
 
     def __str__(self) -> str:
+        """ returns string to be printed for SinglyLinkedList """
         output = list()
         future = self.__head
 
@@ -41,6 +58,11 @@ class SinglyLinkedList:
         return "\n".join(output)
 
     def sorted_insert(self, value):
+        """
+        Sorts the node values
+        Args:
+            value: value of node
+        """
         if self.__head is None:
             self.__head = Node(value)
             return
