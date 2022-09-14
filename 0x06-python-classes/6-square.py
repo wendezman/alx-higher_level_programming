@@ -1,6 +1,17 @@
 #!/usr/bin/python3
+""" Square module """
+
+
 class Square:
+    """ Declares a square class """
+
     def __init__(self, size=0, position=(0, 0)) -> None:
+        """
+        Intializes the attributes
+        Args:
+            size: size of square
+        position:  position of square
+        """
         self.size = size
         self.position = position
 
@@ -44,7 +55,7 @@ class Square:
             for new_line in range(pos2):
                 print()
             while integer < self.__size:
-                
+
                 j = 0
                 while j < pos1:
                     print(" ", end='')
@@ -56,3 +67,5 @@ class Square:
                     number += 1
                 print()
                 integer += 1
+
+
