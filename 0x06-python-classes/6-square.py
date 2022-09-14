@@ -17,6 +17,7 @@ class Square:
 
     @property
     def size(self):
+        """ Gets the private attribute to be used in class """
         return self.__size
 
     @size.setter
@@ -30,6 +31,7 @@ class Square:
 
     @property
     def position(self):
+        """ Gets the private attribute to be used in class """
         return self.__position
 
     @position.setter
@@ -44,9 +46,11 @@ class Square:
             self.__position = value
 
     def area(self):
+        """ Computes area of a square """
         return self.__size ** 2
 
     def my_print(self):
+        """ Prints in stdout the square with the character # """
         if self.__size == 0:
             print()
         else:
