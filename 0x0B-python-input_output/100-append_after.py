@@ -5,7 +5,9 @@ The function 100-append_after.py
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """inserts a line of text to a file, after each line containing a specific string"""
+    """inserts a line of text to a file, after each line
+    containing a specific string
+    """
     inserted = []
     with open(filename, "r", encoding="utf-8") as myfile:
         inserted = myfile.readlines()
